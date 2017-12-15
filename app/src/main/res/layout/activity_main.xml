@@ -1,18 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.apple.chatemotion.MainActivity">
+<LinearLayout
+    android:id="@+id/relativew"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+      
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          >
+ 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:id="@+id/root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <!--聊天界面-->
+        
+                    <ListView
+                        android:id="@+id/lv_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
 
-</android.support.constraint.ConstraintLayout>
+
+                        android:divider="@null"/>
+                <FrameLayout
+                    android:id="@+id/fl_emotionview_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+      
+
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_editarea"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:gravity="bottom"-->
+                    <!--android:minHeight="50dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:paddingBottom="9dp"-->
+                    <!--android:paddingLeft="12dp"-->
+                    <!--android:paddingRight="12dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_voice"-->
+                        <!--style="@style/fixed_32dp"-->
+                        <!--android:src="@mipmap/app_chatspeechinput"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_keybord_left"-->
+                        <!--style="@style/fixed_32dp"-->
+                        <!--android:src="@mipmap/app_chatkeyb"-->
+                        <!--android:visibility="gone"/>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<EditText-->
+                            <!--android:id="@+id/et_message"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@drawable/app_message_input"-->
+
+                            <!--android:minHeight="32dp"-->
+                           <!---->
+                            <!--android:maxLines="4"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:textSize="14dp"/>-->
+
+                        <!--<Button-->
+                            <!--android:id="@+id/btn_voice"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="32dp"-->
+                            <!--android:background="@drawable/btn_voice_message"-->
+                            <!--android:text="按住说话"-->
+                            <!--android:visibility="gone"/>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_face"-->
+                        <!--style="@style/fixed_32dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:src="@mipmap/app_chatface"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_keybord_right"-->
+                        <!--style="@style/fixed_32dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:src="@mipmap/app_chatkeyb"-->
+                        <!--android:visibility="gone"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_open_other"-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="32dp"-->
+                        <!--android:src="@mipmap/app_chatopen"-->
+                        <!--android:visibility="visible"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_close_other"-->
+                        <!--style="@style/fixed_32dp"-->
+                        <!--android:src="@mipmap/app_chatclose"-->
+                        <!--android:visibility="gone"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_sendmsg"-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="32dp"-->
+                        <!--android:background="@drawable/btn_blue_bg"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="发送"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="@dimen/tsize_16"-->
+                        <!--android:visibility="gone"/>-->
+                <!--</LinearLayout>-->
+
+           <!---->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_menu"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="80dp"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:visibility="gone">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_img"-->
+                        <!--style="@style/base_h_v_c">-->
+
+                        <!--<ImageView-->
+                            <!--style="@style/fixed_32dp"-->
+                            <!--android:src="@mipmap/app_chatimg"/>-->
+
+                        <!--<TextView-->
+                            <!--style="@style/communicate_menu"-->
+                            <!--android:text="照片"/>-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_viedo"-->
+                        <!--style="@style/base_h_v_c">-->
+
+                        <!--<ImageView-->
+                            <!--style="@style/fixed_32dp"-->
+                            <!--android:src="@mipmap/app_chatvideo"/>-->
+
+                        <!--<TextView-->
+                            <!--style="@style/communicate_menu"-->
+                            <!--android:text="@string/viedo"/>-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_voice"-->
+                        <!--style="@style/base_h_v_c">-->
+
+                        <!--<ImageView-->
+                            <!--style="@style/fixed_32dp"-->
+                            <!--android:src="@mipmap/app_chatvoice"/>-->
+
+                        <!--<TextView-->
+                            <!--style="@style/communicate_menu"-->
+                            <!--android:text="@string/voice"/>-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_redbg"-->
+                        <!--style="@style/base_h_v_c">-->
+
+                        <!--<ImageView-->
+                            <!--style="@style/fixed_32dp"-->
+                            <!--android:src="@mipmap/app_chatredp"/>-->
+
+                        <!--<TextView-->
+                            <!--style="@style/communicate_menu"-->
+                            <!--android:text="@string/redbag"/>-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/ll_emoji"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:orientation="vertical">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/emoji_viewpage"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:id="@+id/emoji_cursor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 录音显示UI层-->
+            <LinearLayout
+                android:id="@+id/rcChat_popup"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <include
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    layout="@layout/voice_rcd_hint_window" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
